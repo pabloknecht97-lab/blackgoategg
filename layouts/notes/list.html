@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="notes-feed">
+    <div class="notes-header">
+        <h1 class="page-title">动态</h1>
+        <p class="notes-subtitle">短记、随感、碎片</p>
+    </div>
+    {{ range .Pages.ByDate.Reverse }}
+    <article class="note-item">
+        <time class="note-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年01月02日" }}</time>
+        <div class="note-content">
+            {{ .Content }}
+        </div>
+    </article>
+    {{ end }}
+</div>
+{{ end }}

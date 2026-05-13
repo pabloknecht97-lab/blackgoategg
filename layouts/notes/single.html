@@ -1,0 +1,9 @@
+{{ define "main" }}
+<article class="note-item note-single">
+    <time class="note-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年01月02日" }}</time>
+    <div class="note-content">
+        {{ .Content }}
+    </div>
+    <a class="note-back" href="{{ "notes" | relURL }}">← 返回动态</a>
+</article>
+{{ end }}

@@ -401,6 +401,74 @@ body {
     color: var(--link-color);
 }
 
+/* === 动态板块 === */
+.notes-header {
+    margin-bottom: 2.5rem;
+}
+
+.notes-subtitle {
+    font-size: 0.9rem;
+    color: var(--content-muted);
+    margin-top: -1.5rem;
+    font-style: italic;
+}
+
+.notes-feed {
+    max-width: 100%;
+}
+
+.note-item {
+    padding: 1.8rem 0;
+    border-bottom: 1px dotted var(--border-color);
+}
+
+.note-item:first-of-type {
+    padding-top: 0;
+}
+
+.note-item:last-child {
+    border-bottom: none;
+}
+
+.note-date {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--content-muted);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.06em;
+}
+
+.note-content {
+    font-size: 0.98rem;
+    line-height: 1.95;
+}
+
+.note-content p {
+    margin-bottom: 0.6rem;
+    text-indent: 0;
+}
+
+.note-content p:last-child {
+    margin-bottom: 0;
+}
+
+.note-single {
+    padding-top: 0;
+}
+
+.note-back {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.note-back:hover {
+    color: var(--link-hover);
+}
+
 /* === 响应式：平板及以下 === */
 @media (max-width: 900px) {
     :root {
@@ -498,6 +566,14 @@ body {
         flex-direction: column;
         gap: 0.15rem;
         padding: 0.6rem 0;
+    }
+
+    .note-item {
+        padding: 1.2rem 0;
+    }
+
+    .note-content {
+        font-size: 0.92rem;
     }
 }
 
