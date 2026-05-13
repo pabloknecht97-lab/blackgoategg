@@ -6,7 +6,7 @@
     </div>
     {{ range .Pages.ByDate.Reverse }}
     <article class="note-item">
-        <time class="note-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年01月02日" }}</time>
+        <time class="note-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年01月02日 15:04" }}</time>
         <div class="note-content">
             {{ .Content }}
         </div>

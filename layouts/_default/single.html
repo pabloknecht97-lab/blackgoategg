@@ -3,7 +3,7 @@
     <header class="post-header">
         <h1 class="post-title">{{ .Title }}</h1>
         {{ if eq .Section "posts" }}
-        <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年01月02日" }}</time>
+        <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年01月02日 15:04" }}</time>
         {{ end }}
     </header>
     <div class="post-content">
