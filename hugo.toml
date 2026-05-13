@@ -1,0 +1,22 @@
+baseURL = '/'
+relativeURLs = true
+locale = 'zh-CN'
+title = '黑山羊之卵'
+summaryLength = 80
+
+[params]
+  subtitle = '文学实验与私人写作'
+  author = '你的名字'
+  description = '一个极简的私人文学博客'
+  sidebarBg = '#16181e'
+  sidebarText = '#a09888'
+  sidebarHover = '#d4c5b2'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[privacy]
+  [privacy.googleFonts]
+    disable = false

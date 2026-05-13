@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="post-list">
+    {{ $posts := where .Site.RegularPages "Section" "posts" }}
+    {{ if $posts }}
+        {{ range $posts.ByDate.Reverse }}
+        <article class="post-item">
+            <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年01月02日" }}</time>
+            <p class="post-summary">{{ .Summary }}</p>
+            <a class="post-more" href="{{ .RelPermalink }}">阅读全文 →</a>
+        </article>
+        {{ end }}
+    {{ else }}
+        <p class="empty-message">还没有文章，开始写下你的第一篇吧。</p>
+    {{ end }}
+</div>
+{{ end }}

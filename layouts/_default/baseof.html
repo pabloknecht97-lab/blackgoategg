@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body>
+    {{ partial "sidebar.html" . }}
+    <main class="main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

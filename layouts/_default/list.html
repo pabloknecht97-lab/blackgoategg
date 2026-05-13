@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="post-list">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ range .Pages.ByDate.Reverse }}
+    <article class="post-item">
+        <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年01月02日" }}</time>
+        <p class="post-summary">{{ .Summary }}</p>
+        <a class="post-more" href="{{ .RelPermalink }}">阅读全文 →</a>
+    </article>
+    {{ end }}
+</div>
+{{ end }}
