@@ -3,18 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>命理咨询 · 数字分身</title>
+<meta name="theme-color" content="#0B0810">
+<title>虚室</title>
 <style>
-  body { background:#0f0f1a; color:#e0d8c8; font-family:sans-serif; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100dvh; margin:0; text-align:center; }
-  h1 { color:#c9a84c; font-size:1.2rem; margin-bottom:8px; }
-  p { color:#a09880; font-size:0.85rem; }
-  a { color:#c9a84c; }
+  :root {
+    --bg: #0B0810;
+    --gold: #C9A84C;
+    --t1: #E8E4DC;
+    --t3: #7A7262;
+    --t4: #544E40;
+    --font-serif: "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
+    --font-ui: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--t1);
+    font-family: var(--font-ui);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    padding: 32px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .brand {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--t1);
+    letter-spacing: 0.25em;
+    margin-bottom: 32px;
+  }
+
+  .verse {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    color: var(--t4);
+    letter-spacing: 0.12em;
+    line-height: 2.2;
+    margin-bottom: 12px;
+  }
+
+  .verse .attr {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--t4);
+    letter-spacing: 0.08em;
+    margin-top: 6px;
+  }
+
+  .star {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin: 48px auto;
+    animation: starBreathe 2.4s ease-in-out infinite;
+  }
+
+  @keyframes starBreathe {
+    0%, 100% { opacity: 0.12; transform: scale(0.7); }
+    50%      { opacity: 0.85; transform: scale(1.5); }
+  }
+
+  .hint {
+    font-size: 0.7rem;
+    color: var(--t3);
+    letter-spacing: 0.08em;
+  }
+
+  .hint a {
+    color: var(--t3);
+    text-decoration: none;
+    border-bottom: 1px solid var(--t4);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .star { animation: none; opacity: 0.4; }
+  }
 </style>
 </head>
 <body>
-<h1>命理咨询 · 数字分身</h1>
-<p>页面跳转中…</p>
-<p style="font-size:0.7rem;">如未自动跳转，请点 <a href="https://866792ba72680e.lhr.life">这里</a></p>
-<script>location.replace('https://866792ba72680e.lhr.life')</script>
+
+<div class="brand">虚室</div>
+
+<div class="verse">
+  瞻彼阕者，虚室生白，吉祥止止
+  <span class="attr">—《庄子·人间世》</span>
+</div>
+
+<div class="star"></div>
+
+<div class="hint">
+  即将进入…<br><br>
+  如未自动跳转，请点 <a href="https://866792ba72680e.lhr.life">这里</a>
+</div>
+
+<script>
+  // 短暂停顿让视觉落地，然后跳转
+  setTimeout(function() {
+    location.replace('https://866792ba72680e.lhr.life');
+  }, 1200);
+</script>
+
 </body>
 </html>
