@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /world/
+Disallow: /css/
+Disallow: /app/
+
+# 黑山羊之卵 — GitHub Pages
+# /world/ 是世界图谱，不希望被搜索引擎索引
+# /app/  是跳转页，不需要爬虫

@@ -4,3 +4,21 @@ public/
 .DS_Store
 *.zip
 *.json
+
+# 世界图谱 — 不公开
+static/world/
+
+# 敏感个人数据
+*.pdf
+*.csv
+chat_export*.md
+cherry-studio-export*
+cherry-devtools-export*
+saas-nexus*.md
+playlist_favourites.csv
+NeteasePlaylist*.csv
+
+# 临时文件
+TEMP/
+_p2-*.html
+nul
